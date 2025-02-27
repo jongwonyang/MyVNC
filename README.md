@@ -64,9 +64,13 @@ UltraVNC Repeater는 UltraVNC Server와 Viewer 사이에서 프록시 역할을 
 
 ### 최종 설계 도출
 
-CRD에서 구글 서버를 거치는 부분을 온프레미스 Spring App으로 교체하고 UltraVNC 라이브러리를 이용하여 최종 설계를 다음과 같이 시퀀스 다이어그램으로 작성했습니다.
+CRD에서 구글 서버를 거치는 부분을 온프레미스 Spring App으로 교체하고 UltraVNC 라이브러리를 이용하여 시퀀스 다이어그램을 작성했습니다.
 
 ![MyVNC 시퀀스 다이어그램](docs/sequence-diagram-of-myvnc.png)
+
+전체 구조는 다음과 같습니다.
+
+![MyVNC 아키텍처](docs/architecture-of-myvnc.png)
 
 ### 결과
 "기존 프로그램 분석 → 문제점 도출 → 기술 선정 → 문제 해결을 위한 설계 작성" 이라는 과정을 거치며 비즈니스 요구사항을 만족하기 위한 설계를 작성할 수 있었습니다.
@@ -88,7 +92,7 @@ UltraVNC의 설정 파일에 다음과 같이 작성하여 이벤트 메시지 �
 useeventinterface = true
 
 eventlistenerhost = 127.0.0.1
-eventlistenerport = 55555
+eventlistenerport = 2002
 ```
 
 ### 메시지 객체 정의
